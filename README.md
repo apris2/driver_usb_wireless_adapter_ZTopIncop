@@ -1,25 +1,25 @@
 
-# Driver WiFi ZTopInc  
+# Driver WiFi ZTopInc for Linux  
 
-This repository is a fork of [driver_wifi_ztopinc](https://codeberg.org/sallecta/driver_wifi_ztopinc.git). Modifications have been made to improve compatibility with **Ubuntu 24.04.2 LTS** and **Linux kernel 6.11.0-19-generic**.  
+This repository provides a **Linux WiFi driver** for the **ZTopInc 802.11n USB wireless adapter NIC** (**ID: 350b:9101**) , ensuring compatibility with **Ubuntu 24.04 LTS** and **Linux kernel 6.11.0-19-generic**.  
 
-## Changes  
-- Fixed an issue in `usb.c` at line 1114 and other related sections.  
-- Ensured compatibility with **Ubuntu 24.04 (Noble)**.  
-- Adapted the driver for **Linux kernel 6.11.0-19-generic**.  
-- Added support for **ZTopInc 802.11n NIC** (**ID: 350b:9101**).  
+It is a fork of [driver_wifi_ztopinc](https://codeberg.org/sallecta/driver_wifi_ztopinc.git) with **fixes and kernel support improvements**.  
 
-## Installation  
+## Features & Fixes  
+- **Fixed** an issue in `usb.c` at line 1114 and related sections.  
+- **Optimized** for **Ubuntu 24.04 (Noble)** and **Linux kernel 6.11.0-19-generic**.  
 
-### Install Dependencies  
-Before building the driver, install the necessary packages:  
+## Installation Guide  
+
+### Step 1: Install Dependencies  
+Before compiling the **Linux WiFi driver**, install the required packages:  
 
 ```bash
 sudo apt update
 sudo apt install dkms build-essential git
 ```
 
-### Clone the Repository and Build the Driver  
+### Step 2: Clone, Build, and Load the Driver  
 Run the following commands to clone this repository, navigate to the directory, and compile the driver:  
 
 ```bash
@@ -27,19 +27,17 @@ make
 sudo insmod ./zt9101_ztopmac_usb.ko cfg=./wifi.cfg
 ```
 
-### Troubleshooting  
-If you encounter module signature errors, try disabling **Secure Boot** in your BIOS.  
+### Step 3: Troubleshooting  
+If the driver fails to load due to **module signature errors**, disable **Secure Boot** in your BIOS.  
 
-## System Information  
-- **Device**: ZTopInc 802.11n NIC (**ID: 350b:9101**)  
+## System Compatibility  
+- **Device**: ZTopInc 802.11n USB Wireless Adapter (**ID: 350b:9101**)  
 - **OS**: Ubuntu 24.04.2 LTS (Noble)  
 - **Kernel**: 6.11.0-19-generic  
+- **Supported Architectures**: x86_64  
 
-## Images
-![Wireless Adapter ZTopInc](https://github.com/apris2/driver_usb_wireless_adapter_ZTopIncop/raw/main/IMG1.jpg)
-![Wireless Adapter ZTopInc](https://github.com/apris2/driver_usb_wireless_adapter_ZTopIncop/raw/main/IMG2.jpg)
+## Images  
+![ZTopInc WiFi Adapter](https://github.com/apris2/driver_usb_wireless_adapter_ZTopIncop/raw/main/IMG1.jpg)  
+![ZTopInc WiFi Adapter](https://github.com/apris2/driver_usb_wireless_adapter_ZTopIncop/raw/main/IMG2.jpg)  
 
-
-
----
-
+---  
