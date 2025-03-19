@@ -34,7 +34,6 @@ If the driver fails to load due to **module signature errors**, disable **Secure
 - **Device**: ZTopInc 802.11n USB Wireless Adapter (**ID: 350b:9101**)  
 - **OS**: Ubuntu 24.04.2 LTS (Noble)  
 - **Kernel**: 6.11.0-19-generic  
-- **Supported Architectures**: x86_64  
 
 ## Images  
 ![ZTopInc WiFi Adapter](https://github.com/apris2/driver_usb_wireless_adapter_ZTopIncop/raw/main/IMG1.jpg)  
